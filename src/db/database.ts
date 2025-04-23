@@ -12,7 +12,7 @@ class Database {
 
         // create an intial connection with the database
         const initialConn = await mysql2.createConnection({
-            host: 'localhost',
+            host: 'mysql',
             user: 'root',   
             password: 'root',
         })
@@ -22,7 +22,7 @@ class Database {
 
         // create a connection to the school management database
         Database.connection = await mysql2.createConnection({
-            host: 'localhost',
+            host: 'mysql',
             user: 'root',   
             password: 'root',
             database: 'school_management',

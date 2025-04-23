@@ -1,0 +1,25 @@
+# Node modules
+node_modules
+
+# Production build output
+dist
+
+# Environment variables
+.env
+
+# Logs
+*.log
+logs/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Git
+.git
+.gitignore
+
+# Docker files you don't want in image
+docker-compose.yml
+.dockerignore
+Dockerfile.dev
