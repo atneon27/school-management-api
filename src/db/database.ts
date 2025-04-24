@@ -21,11 +21,13 @@ class Database {
         await initialConn.query('CREATE DATABASE IF NOT EXISTS school_management');
 
         // create a connection to the school management database
-        Database.connection = await mysql2.createConnection({
+        Database.connection = await mysql2.createPool({
             host: 'mysql',
             user: 'root',   
             password: 'root',
             database: 'school_management',
+            waitForConnections: true,
+            connectionLimit: 10
         });
 
         // create the schools table
